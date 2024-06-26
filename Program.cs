@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Product_git.Data;
+using Product_git.Service.Interface;
+using Product_git.Service.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
   options.UseSqlServer(connectionString));
 
     builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+    builder.Services.AddTransient<ICategoryService, CategoryService>();
+
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
