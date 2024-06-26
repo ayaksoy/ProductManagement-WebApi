@@ -1,0 +1,6 @@
+@Product_git_HostAddress = http://localhost:5179
+
+GET {{Product_git_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
