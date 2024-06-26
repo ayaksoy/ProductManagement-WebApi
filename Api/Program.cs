@@ -10,6 +10,19 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        var Allow = "Policy";
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy(Allow,
+            policy =>
+            {
+                policy.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+            });
+        });
+
+
         // Add services to the container.
 
         builder.Services.AddControllers();
@@ -39,6 +52,7 @@ public class Program
 
         app.UseAuthorization();
 
+        app.UseCors(Allow);
 
         app.MapControllers();
 

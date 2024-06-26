@@ -4596,11 +4596,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ahmet/Desktop/asd/Product-git.csproj",
+      "projectUniqueName": "/Users/ahmet/Desktop/Project/Api/Product-git.csproj",
       "projectName": "Product-git",
-      "projectPath": "/Users/ahmet/Desktop/asd/Product-git.csproj",
+      "projectPath": "/Users/ahmet/Desktop/Project/Api/Product-git.csproj",
       "packagesPath": "/Users/ahmet/.nuget/packages/",
-      "outputPath": "/Users/ahmet/Desktop/asd/obj/",
+      "outputPath": "/Users/ahmet/Desktop/Project/Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ahmet/.nuget/NuGet/NuGet.Config"

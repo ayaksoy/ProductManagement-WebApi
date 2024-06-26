@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Product_git.Model;
 using Product_git.Service.Interface;
@@ -12,6 +13,7 @@ namespace Product_git.Controller
 {
     [ApiController]
     [Route("api/[controller]")]
+    [EnableCors("Policy")]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService service;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uy02wbKhOaI=",
+  "dgSpecHash": "aQUni9B87pg=",
   "success": true,
-  "projectFilePath": "/Users/ahmet/Desktop/asd/Product-git.csproj",
+  "projectFilePath": "/Users/ahmet/Desktop/Project/Api/Product-git.csproj",
   "expectedPackageFiles": [
     "/Users/ahmet/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/ahmet/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
