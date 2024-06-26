@@ -1,4 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Product_git.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+ ?? throw new InvalidOperationException("Baglanti hatasi");
+
+ builder.Services.AddDbContext<ApplicationDbContext>(options =>
+  options.UseSqlServer(connectionString));
+
+    builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,7 +35,7 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
+    var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
