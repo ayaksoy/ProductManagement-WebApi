@@ -10,7 +10,7 @@ namespace Product_git.Service.Interface
     {
         public Task<string> AddAsync(Category category);
         public Task<Category> GetByIdAsync(int id);
-        public List<Category> GetAllAsync();
+        public Task<List<Category>> GetAllAsync();
         public Task<string> UpdateAsync(Category category);
         public Task<string> DeleteById(int id);
 
